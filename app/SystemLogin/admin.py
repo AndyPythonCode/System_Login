@@ -21,7 +21,9 @@ class UserAdminConfig(UserAdmin):
         ('Permissions',{'fields':('is_active','is_staff','is_superuser')}),
         ('Personal',{'fields':('gender','birth_date','start_date','last_login')})
     )
-
+    
+    readonly_fields = ('date_joined',)
+    
     add_fieldsets = (
         (None, {
             'classes': ('wide',),
